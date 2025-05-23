@@ -48,8 +48,8 @@ def delete_a_product():
     description = data.get('description', '')if type == "description" else ''#
 
 
-     #Creating the category
-         category = category(id=id,at,created_at=created_at,title=title, description=description, price=price)
-         db.session.add(category)
+     #Creating the product
+         product = product(id=id,at,created_at=created_at,title=title, description=description, price=price)
+         db.session.add(product)
          db.session.commit()
 
