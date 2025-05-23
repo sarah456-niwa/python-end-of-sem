@@ -8,13 +8,33 @@ from flask_jwt_extended import jwt_required, get_jwt_identity
  categories blueprint
 categories = Blueprint('category', _name_,url_prefix='/api/v1/category')
 
-# user registration
+# category registration
 
 @category.route("/register,methods=['POST']")
 def create_a_category():
     data = request.json
     id = data.get('id')
     title   = data.get('title')
+
+ #Creating the category
+         category = category(id=id,at,created_at=created_at,title=title)
+         db.session.add(category)
+         db.session.commit()
+    
+
+    
+    
+
+
+
+
+
+
+
+ 
+ 
+
+
 
 
     
