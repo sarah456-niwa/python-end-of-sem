@@ -18,3 +18,8 @@ def create_a_customer():
     title   = data.get('title')
     contact = data.get('contact')
     location = data.get('location')
+
+     #Creating the category
+         category = category(id=id,at,created_at=created_at,title=title, contact=contact, location=location)
+         db.session.add(category)
+         db.session.commit()

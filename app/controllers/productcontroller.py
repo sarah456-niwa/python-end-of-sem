@@ -47,3 +47,9 @@ def delete_a_product():
     price = data.get('price')
     description = data.get('description', '')if type == "description" else ''#
 
+
+     #Creating the category
+         category = category(id=id,at,created_at=created_at,title=title, description=description, price=price)
+         db.session.add(category)
+         db.session.commit()
+
