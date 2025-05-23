@@ -18,8 +18,9 @@ def create_a_customer():
     title   = data.get('title')
     contact = data.get('contact')
     location = data.get('location')
-
+    created_at=data.get('created_at')
+    updated_at = data.get('updated_at')
      #Creating the customer
-         customer = customer(id=id,at,created_at=created_at,title=title, contact=contact, location=location)
+         customer = customer(id=id,at,created_at=created_at,title=title, updated_at=updated_at, contact=contact, location=location)
          db.session.add(customer)
          db.session.commit()
