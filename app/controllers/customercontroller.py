@@ -5,10 +5,10 @@ from app.models.customermodel import customer
 from app.extensions import db,bcrypt
 from flask_jwt_extended import jwt_required, get_jwt_identity
 
- categories blueprint
-categories = Blueprint('customer', _name_,url_prefix='/api/v1/customer')
+ customer blueprint
+customer = Blueprint('customer', _name_,url_prefix='/api/v1/customer')
 
-# user registration
+# customer registration
 
 @customer.route("/register,methods=['POST']")
 def create_a_customer():
